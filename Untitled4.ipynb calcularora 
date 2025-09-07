@@ -1,0 +1,248 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPS9qHUm3CMIox9fQQBjzLR",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Paulo-Moreiira/python/blob/main/Untitled4.ipynb%20calcularora%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WrcG2nhEMJG4",
+        "outputId": "f1724bc2-ef8a-4ad3-9205-20644d234cb6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "o comprimento da lista é: 14\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Criar um lista de numeros\n",
+        "\n",
+        "numeros = [1,2,3,4,5,6,7,8,9,10,11,12,'a',True]\n",
+        "\n",
+        "# usa a função len() para calcular o comprimento da lista\n",
+        "comprimento = len(numeros)\n",
+        "\n",
+        "# Imprime o comprimento da lista\n",
+        "print(\"o comprimento da lista é:\", comprimento)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Definindo uma função chamada \"soma\"\n",
+        "\n",
+        "def soma(a,b):\n",
+        "    resultado = a + b\n",
+        "    return resultado"
+      ],
+      "metadata": {
+        "id": "XADmBL9zPAVC"
+      },
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "resultado_soma = soma(450,100)\n",
+        "\n",
+        "# Imprimindo o resultado\n",
+        "print(\"a soma de 5 e 3 é:\", resultado_soma)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PtNg2oBwTDDm",
+        "outputId": "294deee8-75c8-46f3-af73-4142686a3708"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a soma de 5 e 3 é: 550\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Lista de nota dn;8324x os estudante\n",
+        "notas = [7.5,8.0,6.5,9.0,9.0]\n",
+        "\n",
+        "# Função regular para calcular a média 7\n",
+        "def calcular_media(notas):\n",
+        "    total =sum(notas)\n",
+        "    media = total / len(notas)\n",
+        "    return media\n",
+        "\n",
+        "#Função lambda para arredondar a média para duas casas decimais\n",
+        "arredondar_média = lambda média: round(média,2)\n",
+        "\n",
+        "# Calcular a média\n",
+        "média = calcular_media(notas)\n",
+        "média_arredondada = arredondar_média(média)\n",
+        "\n",
+        "# Verificar se os estudantes foram aprovados\n",
+        "situação = \"Aprovado\" if média_arredondada >= 7 else \"Reprovado\"\n",
+        "\n",
+        "# Resultado\n",
+        "print(\"Notas dos estudantes:\", notas)\n",
+        "print(\"Média das notas:\", média_arredondada)\n",
+        "print(\"Situação do estudante:\", situação)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-3_tvgciTC-U",
+        "outputId": "64e499db-09de-4311-af14-104fa3db86b3"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Notas dos estudantes: [7.5, 8.0, 6.5, 9.0, 9.0]\n",
+            "Média das notas: 8.0\n",
+            "Situação do estudante: Aprovado\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solicitar ou usuário que insira o valor do produto e o percentual de descontop\n",
+        "valor_produto = float(input(\"Digite o valor do produto: R$\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tJa2-M6muLXF",
+        "outputId": "1fa621a3-3425-4c1f-f004-07f3f2a091f8"
+      },
+      "execution_count": 50,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digite o valor do produto: R$3000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "percentual_desconto = float(input(\"digite o percentual de desconto: \"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_ECceFxmvUIv",
+        "outputId": "9f5b07df-cd9a-4abe-de56-492b9614f20c"
+      },
+      "execution_count": 59,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "digite o percentual de desconto: 100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Calcular p valor final da compra\n",
+        "valor_final = valor_produto - desconto"
+      ],
+      "metadata": {
+        "id": "xJQ4shdF6ZQI"
+      },
+      "execution_count": 60,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Verificar se o percetual de desconto esta dentro dos limitews aceitaveis (0-100%)\n",
+        "if percentual_desconto < 0 or percentual_desconto >100:\n",
+        "    print(\"erro: O percetual de desconto deve estar entre 0% e 100%. \")\n",
+        "else:\n",
+        "    # calcula o valor do desconto\n",
+        "    desconto = valor_produto * (percentual_desconto / 100)"
+      ],
+      "metadata": {
+        "id": "ugtoa-gOvwjF"
+      },
+      "execution_count": 61,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " # Exibe o valor final da compra\n",
+        "print(f\"valor com desconto: R$ {valor_final:.2f}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1J7Us_WUxw2Y",
+        "outputId": "7e62e7eb-8473-4a56-b2d5-21ba7b0fc0f4"
+      },
+      "execution_count": 62,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "valor com desconto: R$ 1500.00\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
